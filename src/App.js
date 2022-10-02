@@ -18,10 +18,10 @@ import { IoIosArrowBack } from "react-icons/io";
 import { BiMenuAltLeft } from "react-icons/bi";
 
 function App() {
-  // const [inputText, setInputText] = useState("");
+  const [setInputText] = useState("");
   const [show, setShow] = useState(false);
   let inputHandler = (e) => {
-    //   var lowerCase = e.target.value.toLowerCase();
+    var lowerCase = e.target.value.toLowerCase();
     //   setInputText(lowerCase);
     // };
 
@@ -30,6 +30,7 @@ function App() {
     $("#users .userCard").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
+    setInputText(lowerCase);
   };
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
