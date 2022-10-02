@@ -4,7 +4,7 @@ import User from "./app/user/User";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -12,7 +12,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import CloseButton from 'react-bootstrap/CloseButton';
+// import CloseButton from 'react-bootstrap/CloseButton';
 
 import { FiSearch } from "react-icons/fi";
 import { IoIosArrowBack } from "react-icons/io";
