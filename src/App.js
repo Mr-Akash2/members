@@ -1,10 +1,10 @@
 import { React, useState } from "react";
 import './App.css';
 import User from "./app/user/User";
+import $ from 'jquery';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import Container from 'react-bootstrap/Container';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -12,7 +12,6 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-// import CloseButton from 'react-bootstrap/CloseButton';
 
 import { FiSearch } from "react-icons/fi";
 import { IoIosArrowBack } from "react-icons/io";
@@ -22,8 +21,15 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [show, setShow] = useState(false);
   let inputHandler = (e) => {
-    var lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
+    //   var lowerCase = e.target.value.toLowerCase();
+    //   setInputText(lowerCase);
+    // };
+
+    // $("#searchUser").on("keyup", function() {
+    var value = e.target.value.toLowerCase();
+    $("#users .userCard").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
   };
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
@@ -49,7 +55,7 @@ function App() {
               onChange={inputHandler}
             />
           </InputGroup>
-          <User input={inputText} />
+          <User />
         </Offcanvas.Body>
       </Offcanvas>
     </div>

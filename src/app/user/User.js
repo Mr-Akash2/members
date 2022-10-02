@@ -10,27 +10,27 @@ import { userLists } from './list/list'
 
 import "./user.css"
 
-function User(props) {
-    const filteredData = userLists.filter((el) => {
-        if (props.input === '') {
-            return el;
-        } else {
-            return el.name.toLowerCase().includes(props.input)
-        }
-    })
+function User() {
+    // const filteredData = userLists.filter((el) => {
+    //     if (props.input === '') {
+    //         return el;
+    //     } else {
+    //         return el.name.toLowerCase().includes(props.input)
+    //     }
+    // })
     return (
-        <div>
+        <div id="users">
             {
-                filteredData.map((user) => {
+                userLists.map((user) => {
                     return (
-                        <Card className="border-0">
+                        <Card className="border-0 userCard">
                             <Card.Body>
                                 <Row>
                                     <Col xs={2}>
                                         <img style={{maxWidth:"140%"}} src={user.profile} alt="" />
                                     </Col>
                                     <Col xs={8} className="mt-3 ps-4">
-                                        <p className="fw-bold user-detail">{user.name} - <span className="text-muted">{user.role}</span></p>
+                                        <p className="fw-bold user-detail name">{user.name} - <span className="text-muted">{user.role}</span></p>
                                         <p className="text-muted user-detail">{user.mail}</p>
                                     </Col>
                                     <Col xs={2} className="text-end">
