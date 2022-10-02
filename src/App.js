@@ -18,7 +18,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { BiMenuAltLeft } from "react-icons/bi";
 
 function App() {
-  const [inputText, setInputText] = useState("");
+  // const [inputText, setInputText] = useState("");
   const [show, setShow] = useState(false);
   let inputHandler = (e) => {
     //   var lowerCase = e.target.value.toLowerCase();
